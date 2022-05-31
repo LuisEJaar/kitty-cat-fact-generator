@@ -19,8 +19,6 @@ const server = http.createServer((req, res) => {
   
   const pages = {
     '/': ['index.html', 'text/html'],
-    '/otherpage': ['otherpage.html', 'text/html'],
-    '/otherotherpage': ['otherotherpage.html', 'text/html'],
     '/js/main.js': ['js/main.js','text/javascript']
   }
 
@@ -82,5 +80,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8000);
+const PORT = process.env.PORT || 8000
+server.listen(PORT);
 
